@@ -15,7 +15,7 @@ def getString(t):
     else:
         arrows=int((t/450)**2.5+3);
         farrows=((t/450)**2.5+2)%1.0
-        return ("10[#FFFF00]^^^[/FFFF00]"*(arrows%(9**3)//81)+"10[#FF7F00]^^[/#FF7F00]"*(arrows%81//9)+"10[red]^[/red]"*(arrows%9)+"{:,.1f}".format(10**(farrows*9+1)))
+        return ("10[#FFFF00]^^^[/#FFFF00]"*(arrows%(9**3)//81)+"10[#FF7F00]^^[/#FF7F00]"*(arrows%81//9)+"10[red]^[/red]"*(arrows%9)+"{:,.1f}".format(10**(farrows*9+1)))
 while(1):
     tm+=0.05;
     print("[white]"+getString(tm)+"[/]"+' '*999,end='\r');
